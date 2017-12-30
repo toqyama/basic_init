@@ -1,0 +1,71 @@
+ # .bash_local
+
+ ### local setteings
+
+ ## poject
+ #snap_dir=${HOME}/samba/${snap_name}
+
+ ### prompt setting ###
+ #export PS1="{\h:\u:\[\e[1;35m\]\W\[\e[00m\]}> "
+
+
+ alias cw='cd /home/toqyama/work'
+ alias lnx='cd /home/toqyama/work/linux'
+ alias c=clear
+ alias cl='clear;ls'
+ #alias ctags='/usr/bin/ctags'
+ alias tags='ctags -R -o .tags'
+ alias fn='find . -name'
+ alias view='vi -R'
+ alias objdump='arm-linux-gnueabihf-objdump'
+ alias gl='git log HEAD -1'
+ alias glp='git log HEAD -1 --pretty=%h'
+ alias vp='vi ~/.vim/dein/toml/dein.toml'
+ alias vpl='vi ~/.vim/dein/toml/dein_lazy.toml'
+ alias difflist="grep 'diff ' |cut -f3 -d ' '|sed -e 's/a\//\.\//'"
+# alias gd1='git log HEAD^   -1 --pretty=%h|xargs git diff'
+# alias gd2='git log HEAD^^  -1 --pretty=%h|xargs git diff'
+# alias gd3='git log HEAD^^^ -1 --pretty=%h|xargs git diff'
+# alias gd4='git log HEAD^^^ -1 --pretty=%h|xargs git diff'
+
+ # git log/diff shortcut
+ i=1
+ p='^'
+
+ while [ $i -le 10 ]
+ do
+ 	alias "gd$i=git log HEAD"${p}" -1 --pretty=%h|xargs git diff"
+ 	alias "glp$i=git log HEAD"${p}" -1 --pretty=%h"
+ 	alias "gl$i=git log HEAD"${p}" -1 "
+	i=$(($i+1))
+	p=${p}'^'
+ done
+
+ # Terminal
+ export TERM="xterm-256color"
+
+ export PATH=~/local/bin/:${PATH}
+ export MANPATH=~/local/man:${MANPATH}
+ export MANPATH=~/local/man1:${MANPATH}
+
+ # t-kernel setting
+
+ ### ARM compiller & GCC cross compiller (for ARM) ###
+# export PATH=/usr/local/ARM_Compiler_5/bin/:/opt/gcc-linaro-arm-linux-gnueabihf/bin:${PATH}
+ #export PATH=/usr/local/ARM_Compiler_5.06u2/bin/:/opt/gcc-linaro-arm-linux-gnueabihf/bin:${PATH}
+# export CROSS_COMPILE=arm-linux-gnueabihf-
+ #export CROSS_COMPILE=/opt/maverick/gcc-linaro-4.9-2015.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
+# export ARCH=arm 
+ #export GNUARM=
+# export GNUARM=/opt/gcc-linaro-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
+ #export GNUARM=/opt/gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux/bin/arm-linux-gnueabihf-
+
+#if [[ -x `which colordiff` ]]; then
+	#alias diff='colordiff'
+    #alias diff='colordiff -u'
+#else
+#	alias diff='diff'
+	#alias diff='diff -u'
+#fi
+alias diff='colordiff -u'
+export LESS='-R'

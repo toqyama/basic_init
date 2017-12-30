@@ -1,0 +1,5 @@
+# dein_lazy.toml
+
+[[plugins]]
+  repo = 'Shougo/neocomplete.vim'
+  on_i = 1
