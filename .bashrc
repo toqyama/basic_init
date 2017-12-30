@@ -1,4 +1,4 @@
-# .bashrc_add
+# .bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -6,6 +6,10 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # proxy setting
+
+ #export http_proxy=http://proxy.css.socionext.com:8080
+ #export https_proxy=http://proxy.css.socionext.com:8080
+ #export ftp_proxy=http://proxy.css.socionext.com:8080
 
  ## completion setting
  #complete -D -o default
@@ -35,8 +39,8 @@ fi
  alias rrf='rm -Rf'                             #
  alias rr='rm -R'                              #
  alias cr='cp -Rp'                             #
- alias br="vi ${HOME}/.bashrc_add"
- alias vo="vi ${HOME}/.bashrc_add"
+ alias br="vi ${HOME}/.bashrc"
+ alias vo="vi ${HOME}/.bashrc"
  alias vl="vi ${HOME}/.bashrc_local"
  alias vv="vi ${HOME}/.vimrc"
  alias vc="vi ${HOME}/.dircolors_bash"
@@ -70,7 +74,7 @@ fi
  export EDITOR="vim"
 
  ### prompt setting ###
- #export PS1="{\h:\u:\[\e[1;35m\]\W\[\e[00m\]}> "
+ export PS1="{\h:\u:\[\e[1;35m\]\W\[\e[00m\]}> "
 
  ### language setting ###
  export LANG=ja_JP.UTF-8

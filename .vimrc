@@ -295,8 +295,8 @@ filetype plugin indent on
   "colorscheme default
   "colorscheme hybrid
   "colorscheme Tomorrow-Night
-  "colorscheme Tomorrow-Night-Blue
-  colorscheme Tomorrow-Night-Bright
+  colorscheme Tomorrow-Night-Blue
+  "colorscheme Tomorrow-Night-Bright
   "colorscheme Tomorrow-Night-Eighties
   "colorscheme molokai
   "colorscheme jellybeans

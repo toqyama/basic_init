@@ -49,17 +49,17 @@ repo = 'Shougo/vimshell.vim'
 [[plugins]]
 repo = 'GertjanReynaert/cobalt2-vim-theme'
 
-#[[plugins]]
-#repo = 'sfsekaran/cobalt.vim'
+[[plugins]]
+repo = 'sfsekaran/cobalt.vim'
 
-#[[plugins]]
-#repo = 'tomasr/molokai'
+[[plugins]]
+repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'sickill/vim-monokai'
 
-#[[plugins]]
-#repo = 'altercation/vim-colors-solarized'
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
